@@ -23,3 +23,13 @@ About You
 
 What is Angular?
     Framework for RIA (Rich Internet Applications)
+
+Salary Calculator
+    Assumptions: 
+        Our solution meets 100% of the user requirements
+            No validations are required
+            NO error messages are required
+
+        The application will be prepared for deployment by another team
+            They will refactor the css styles into another .css file
+            They will refactor the js code into another .js file
