@@ -20,3 +20,6 @@ About You
     Primary Skillset
     Experience in Angular (if any)
     Any books you read / shows / movies you watched / that you DONT want other to watch
+
+What is Angular?
+    Framework for RIA (Rich Internet Applications)
