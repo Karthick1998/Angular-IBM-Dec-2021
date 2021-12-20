@@ -25,6 +25,7 @@
     <script>
         //Non UI
         //state & behavior
+        //observable
         function SalaryCalculatorModel(){
             //state
             var _data = {
@@ -110,7 +111,7 @@
                     </section>
                 </div>`
             );
-            
+
             //Reacting to user actions
             $('#txtBasic', $viewEl).change(function () {
                 model.set('basic', parseInt($(this).val()));

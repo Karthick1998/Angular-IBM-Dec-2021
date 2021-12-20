@@ -35,3 +35,60 @@ Salary Calculator
             They will refactor the js code into another .js file
 
 Reactive X Proactive
+    Dumb X Having knowledge
+
+Component (View) = Presentation + UI Behavior + Sync the model state changes
+Application = Composition of components
+
+ES6 (ECMAScript 6 / ES2015 / ESNext)
+    1. let
+    2. const
+    3. Array destructuring
+        var nos = [3,1,4,2,5]
+        var [x, y] = nos
+
+    4. Rest operator (array)
+        var nos = [3,1,4,2,5]
+        var [x,y, ...z]= nos
+
+        function sum(...args){
+            let result = 0;
+            for (let i=0; i < args.length; i++)
+                result += args[i]
+            return result;
+        }
+
+    5. Spread operator (array)
+        var nos = [3,1,4,2,5]
+        var newNos = [...nos, 10, 20, 30]
+
+        function sum(...args){
+            let result = 0;
+            for (let i=0; i < args.length; i++)
+                result += args[i]
+            return result;
+        }
+        sum(...nos)
+
+    6. object destructuring
+        var product = {
+            id : 100,
+            name : 'Pen',
+            cost : 10
+        }
+        undefined
+        var { id , cost } = product
+
+        var {id : x, cost : y } = product
+
+    7. rest operator (object)
+        var product = {
+            id : 100,
+            name : 'Pen',
+            cost : 10
+        }
+        undefined
+        var { id, ...z } = product
+
+    8. spread operator (object)
+        var discountedProduct = { ...product, discount : 10 }
