@@ -33,3 +33,5 @@ Salary Calculator
         The application will be prepared for deployment by another team
             They will refactor the css styles into another .css file
             They will refactor the js code into another .js file
+
+Reactive X Proactive
