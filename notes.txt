@@ -1,0 +1,22 @@
+Magesh Kuppan
+
+Schedule
+    Commence    : 9:30 AM
+    Tea Break   : 11:00 AM (20 mins)
+    Lunch Break : 1:00 PM (1 hr)
+    Tea Break   : 3:30 PM (20 mins)
+    Wind up     : 5:30 PM
+
+Methodology:
+    No Powerpoint
+    100% Handson
+    At least 50% of the participants should have completed the assignment in order to proceed to the next topic
+    Be prepared to showcase your solution to the assignments
+    Feel free to interrupt at any time
+
+About You
+    Name
+    Total Experience
+    Primary Skillset
+    Experience in Angular (if any)
+    Any books you read / shows / movies you watched / that you DONT want other to watch
