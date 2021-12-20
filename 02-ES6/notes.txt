@@ -50,3 +50,77 @@ ES6 (ECMAScript 6 / ES2015 / ESNext)
 
     8. spread operator (object)
         var discountedProduct = { ...product, discount : 10 }
+
+    9. arrow functions
+        /*
+        //function statement
+        function add(x,y){
+            return x + y;
+        }
+
+        //function expression
+        var add = function(x,y){
+            return x + y;
+        }
+
+        var add = (x,y) => {
+            return x + y;
+        }
+        */
+        var add = (x,y) => x + y;
+
+    10. default parameters
+        function add(x = 10,y = 20){
+            return x + y;
+        }
+        add()
+       
+        add(100)
+       
+        add(undefined, 200)
+       
+        add(100,200)
+
+    11. template literals
+        var s = `sum of ${x} and ${y} is ${x+y}`
+
+        var s = `sum of
+        ${x} and ${y} 
+        is ${x+y}`
+
+    12. for of loop
+        var nos = [3,1,4,2,5]
+        
+        for (let no of nos){
+            console.log(no)
+        }
+
+    13. classes
+        class Employee{
+            id = 0;
+            name = '';
+            salary = 0;
+
+            constructor(id, name, salary){
+                this.id = id;
+                this.name = name;
+                this.salary = salary;
+            }
+
+            display(){
+                return `id = ${this.id}, name = ${this.name}, salary = ${this.salary}`
+            }
+        }
+        
+        var emp = new Employee(100, 'Magesh', 10000)
+
+        //Inheritance
+        class FullTimeEmployee extends Employee{
+            benefits = '';
+            constructor(id, name, salary, benefits){
+                super(id, name, salary)
+                this.benefits = benefits
+            }
+        }
+        
+        var fte = new FullTimeEmployee(200, 'Suresh', 20000, 'Good food!')
