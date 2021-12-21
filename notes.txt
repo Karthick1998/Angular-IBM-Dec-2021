@@ -92,3 +92,40 @@ ES6 (ECMAScript 6 / ES2015 / ESNext)
 
     8. spread operator (object)
         var discountedProduct = { ...product, discount : 10 }
+
+
+Application Setup
+    1. Web Server
+    2. TypeScript compiler
+    3. Unit testing
+    4. E2E testing
+    5. Test Runner
+    6. Code Coverage
+    7. Build configuration
+
+Source of State Changes
+    1. User interactions -> Events
+    2. Timer
+    3. Ajax calls
+
+Angular Building Blocks
+    1. Component
+        View
+        Encapsulation of Presentation + UI Behavior + State
+    2. Pipe
+        Transform the data for presentation purposes
+    3. Directive
+        DOM manipulation
+    4. Service
+        NON UI logic
+    5. Module
+        Directory of the application entities (Components, Pipes, Directives, Services & Modules)
+        There has to be a minimum of 1 module in an application
+        The application bootstrapping is by the module
+
+ES6 Modules
+    Alternatives (AMD - Asynchronous Module Definition, CommonJS - CommonJS Modules)
+
+    1. Everything defined in a file is considered 'private' to that file
+    2. Any entity to be accessible from other files have to be explicitly 'exported'
+    3. Any public entity from another file has to be explicitly 'imported' to use

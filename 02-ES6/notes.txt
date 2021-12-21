@@ -124,3 +124,36 @@ ES6 (ECMAScript 6 / ES2015 / ESNext)
         }
         
         var fte = new FullTimeEmployee(200, 'Suresh', 20000, 'Good food!')
+
+TypeScript (typescriptlang.org)
+
+    var x : number = 10;
+
+    function add(x:number, y : number) : number {
+        return x + y;
+    }
+
+    |
+    V
+    TypeScript compiler
+    |
+    V
+
+    var x  = 10;
+
+    function add(x, y )  {
+        return x + y;
+    }
+
+    Support for 
+        any
+        Interfaces
+        Enums
+
+to install the angular cli
+    npm install -g @angular/cli
+
+to create an angular application
+    ng new <project-name>
+    cd <product-name>
+    npm start
