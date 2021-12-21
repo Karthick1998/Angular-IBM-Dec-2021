@@ -116,6 +116,16 @@ Angular Building Blocks
         Transform the data for presentation purposes
     3. Directive
         DOM manipulation
+        Types of Directives
+            1. Attribute Directive
+                Manipulates the attributes of existing DOM Nodes
+                DOES NOT change the structure of DOM tree (by adding / removing dom nodes)
+                used with '[]'
+
+            2. Structural Directive
+                Changes the structure of the DOM tree (by adding / removing dom nodes)
+                used with prefix '*'
+
     4. Service
         NON UI logic
     5. Module
