@@ -20,5 +20,9 @@ export class GreeterComponent implements OnInit {
     this.message = `Hi ${firstName} ${this.lastName}, Have a nice day!`;
   }
 
+  setLastName(lastName : string){
+    console.log(`setting last name: ${lastName}`)
+    this.lastName = lastName;
+  }
 
 }
