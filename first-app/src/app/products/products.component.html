@@ -1,8 +1,10 @@
 <h3>Products</h3>
 <hr>
-<label for="">Product Name :</label>
-<input type="text" #txtProductName>
-<button (click)="onBtnAddProductClick(txtProductName.value)">Add New</button>
+<div *ngIf="products.length < 5">
+    <label for="">Product Name :</label>
+    <input type="text" #txtProductName>
+    <button (click)="onBtnAddProductClick(txtProductName.value)">Add New</button>
+</div>
 <ul>
     <li *ngFor="let product of products">
         <span>{{product}}</span>
