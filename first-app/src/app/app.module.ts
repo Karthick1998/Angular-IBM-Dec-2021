@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { GreeterComponent } from './greeter/greeter.component';
+import { Calculator1Component } from './calculator1/calculator1.component';
+import { Calculator2Component } from './calculator2/calculator2.component';
 
 /* 
 declarations : 
@@ -20,7 +22,9 @@ bootstrap:
 @NgModule({
   declarations: [
     AppComponent,
-    GreeterComponent
+    GreeterComponent,
+    Calculator1Component,
+    Calculator2Component
   ],
   imports: [
     BrowserModule
