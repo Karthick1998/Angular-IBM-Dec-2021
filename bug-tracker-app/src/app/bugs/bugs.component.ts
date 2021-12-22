@@ -40,6 +40,7 @@ export class BugsComponent implements OnInit {
   }
 
   getClosedCount(){
-    return this.bugs.filter(bug => bug.isClosed).length;
+    //return this.bugs.filter(bug => bug.isClosed).length;
+    return this.bugs.reduce((closedCount, bug) => closedCount + (bug.isClosed ? 1 : 0), 0);
   }
 }
