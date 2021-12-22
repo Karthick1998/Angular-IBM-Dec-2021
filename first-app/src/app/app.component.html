@@ -3,7 +3,7 @@
 <button (click)="userChoice='calculator-1'">Calculator - 1</button>
 <button (click)="userChoice='calculator-2'">Calculator - 2</button>
 <button (click)="userChoice='products'">Products</button>
-
+<button (click)="userChoice='salaryCalculator'">Salary Calculator</button>
 <!-- Using ngIf -->
 <!-- 
 <app-greeter *ngIf="userChoice == 'greeter'"></app-greeter>
@@ -18,5 +18,7 @@
     <app-calculator1 *ngSwitchCase="'calculator-1'"></app-calculator1>
     <app-calculator2 *ngSwitchCase="'calculator-2'"></app-calculator2>
     <app-products *ngSwitchCase="'products'"></app-products>
+    <app-salary-calculator *ngSwitchCase="'salaryCalculator'"></app-salary-calculator>
     <div *ngSwitchDefault>Select the option!</div>
+
 </div>

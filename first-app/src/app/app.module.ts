@@ -6,6 +6,7 @@ import { GreeterComponent } from './greeter/greeter.component';
 import { Calculator1Component } from './calculator1/calculator1.component';
 import { Calculator2Component } from './calculator2/calculator2.component';
 import { ProductsComponent } from './products/products.component';
+import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 
 /* 
 declarations : 
@@ -26,7 +27,8 @@ bootstrap:
     GreeterComponent,
     Calculator1Component,
     Calculator2Component,
-    ProductsComponent
+    ProductsComponent,
+    SalaryCalculatorComponent
   ],
   imports: [
     BrowserModule
