@@ -10,10 +10,16 @@ import { BugOperations } from './services/bugOperations.service';
 export class BugsComponent implements OnInit {
 
   bugs : Bug[] = [];
+  newBugName : string = '';
 
   constructor(private bugOperations : BugOperations) { }
 
   ngOnInit(): void {
+  }
+
+  getTruncatedString(str : string){
+    console.log('getTruncatedString triggered');
+    return str.length > 30 ? str.slice(0, 30) + '...' : str;
   }
 
   addBug(newBugName : string) {

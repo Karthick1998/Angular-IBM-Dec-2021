@@ -139,3 +139,10 @@ ES6 Modules
     1. Everything defined in a file is considered 'private' to that file
     2. Any entity to be accessible from other files have to be explicitly 'exported'
     3. Any public entity from another file has to be explicitly 'imported' to use
+
+To create a pipe
+    Create a class
+        Decorate the class with @Pipe decorator
+        implement PipeTransform interface
+            implement the transform method
+        Register the class with the module
