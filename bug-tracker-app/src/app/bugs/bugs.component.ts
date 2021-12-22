@@ -11,16 +11,23 @@ export class BugsComponent implements OnInit {
 
   bugs : Bug[] = [];
   newBugName : string = '';
+  sortAttr : string = '';
+  descending : boolean = false;
 
   constructor(private bugOperations : BugOperations) { }
 
   ngOnInit(): void {
+    this.bugs.push(this.bugOperations.createNew('Server communication failure'));
+    const b1 = this.bugOperations.createNew('Data integrity checks failed')
+    this.bugOperations.toggle(b1);
+    this.bugs.push(b1);
+    const b2 = this.bugOperations.createNew('User actions not recognised')
+    this.bugOperations.toggle(b2);
+    this.bugs.push(b2);
+    this.bugs.push(this.bugOperations.createNew('Application not responding'));
   }
 
-  getTruncatedString(str : string){
-    console.log('getTruncatedString triggered');
-    return str.length > 30 ? str.slice(0, 30) + '...' : str;
-  }
+  
 
   addBug(newBugName : string) {
 
@@ -41,6 +48,7 @@ export class BugsComponent implements OnInit {
   }
 
   getClosedCount() : number {
+    console.log('getClosedCount triggered')
     //return this.bugs.filter(bug => bug.isClosed).length;
     return this.bugs.reduce((closedCount, bug) => closedCount + (bug.isClosed ? 1 : 0), 0);
   }

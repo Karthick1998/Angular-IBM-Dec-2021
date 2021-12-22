@@ -1,15 +1,22 @@
 <section class="stats">
-    <span class="closed">{{getClosedCount()}}</span>
+    <span class="closed">{{bugs | closedCount}}</span>
     <span> / </span>
     <span>{{bugs.length}}</span>
 </section>
 <section class="sort">
     <label for="">Order By :</label>
-    <select name="" id="">
-        <option value=""></option>
-        <option value=""></option>
-    </select><label for="">Descending ? :</label>
-    <input type="checkbox" name="" id="">
+    <select name="" id="" (change)="sortAttr = $any($event.target).value">
+        <option value="">---Select---</option>
+        <option value="id">Id</option>
+        <option value="name">Name</option>
+        <option value="isClosed">Status</option>
+        <option value="createdAt">Created</option>
+    </select>
+    <span>[ {{sortAttr}} ]</span>
+    <label for="">Descending ? :</label>
+    <input type="checkbox" name="" id="" (change)="descending = $any($event.target).checked">
+    <span>[ {{descending}} ]</span>
+    <button>Sort</button>
 </section>
 <section class="edit">
     <label for="">Bug Name :</label>
@@ -19,14 +26,15 @@
 </section>
 <section class="list">
     <ol>
-        <li *ngFor="let bug of bugs">
+        <li *ngFor="let bug of (bugs | sort:sortAttr:descending) ">
+            <small>[ {{bug.id}} ]</small>
             <span 
                 class="bugname"
                 (click)="toggle(bug)"
                 [ngClass]="{closed : bug.isClosed}"
                 [title]="bug.name"
             >{{bug.name | trimText:40}}</span>
-            <div class="datetime">[Created At]</div>
+            <div class="datetime">{{bug.createdAt | date}}</div>
             <button (click)="removeBug(bug)">Remove</button>
         </li>
     </ol>

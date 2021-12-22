@@ -5,7 +5,6 @@ import { Pipe, PipeTransform } from "@angular/core";
 })
 export class TrimTextPipe implements PipeTransform {
     transform(value: string, maxLength : number = 30) : string {
-        console.log('trimText.transform triggered');
         return value.length > maxLength ? value.slice(0, maxLength) + '...' : value;
     }
 }
