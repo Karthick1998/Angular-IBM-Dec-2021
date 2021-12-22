@@ -8,6 +8,7 @@ import { Calculator2Component } from './calculator2/calculator2.component';
 import { ProductsComponent } from './products/products.component';
 import { SalaryCalculatorComponent } from './salary-calculator/salary-calculator.component';
 
+import { SalaryCalculatorModel } from './salary-calculator/salaryCalculatorModel';
 /* 
 declarations : 
   Register all the UI entities
@@ -33,7 +34,9 @@ bootstrap:
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    /* SalaryCalculatorModel */
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

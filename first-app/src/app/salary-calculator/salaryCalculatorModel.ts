@@ -1,3 +1,8 @@
+import { Injectable } from "@angular/core";
+
+@Injectable({
+    providedIn: "root"
+})
 export class SalaryCalculatorModel{
     basic = 0;
     hra = 0;

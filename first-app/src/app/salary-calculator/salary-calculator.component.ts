@@ -8,9 +8,17 @@ import { SalaryCalculatorModel } from './salaryCalculatorModel';
 })
 export class SalaryCalculatorComponent implements OnInit {
 
-  model = new SalaryCalculatorModel();
+ 
+  /* public model : SalaryCalculatorModel;
   
-  constructor() { }
+  constructor(model : SalaryCalculatorModel) {
+    this.model = model;
+  }  */
+ 
+
+  constructor(public model : SalaryCalculatorModel){
+    
+  }
 
   ngOnInit(): void {
   }
