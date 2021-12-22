@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Bug } from './models/bug';
+import { BugOperations } from './services/bugOperations.service';
 
 @Component({
   selector: 'app-bugs',
@@ -8,38 +9,32 @@ import { Bug } from './models/bug';
 })
 export class BugsComponent implements OnInit {
 
-  private _currentBugId : number = 0;
-
   bugs : Bug[] = [];
 
-  constructor() { }
+  constructor(private bugOperations : BugOperations) { }
 
   ngOnInit(): void {
   }
 
   addBug(newBugName : string) {
 
-    const newBug : Bug = {
-      id : ++this._currentBugId,
-      name : newBugName,
-      isClosed : false,
-      createdAt : new Date()
-    }
+    const newBug : Bug = this.bugOperations.createNew(newBugName);
     this.bugs.push(newBug);
   }
+
   removeBug(bug : Bug){
     this.bugs.splice(this.bugs.indexOf(bug), 1)
   }
 
   toggle(bug : Bug){
-    bug.isClosed = !bug.isClosed;
+    this.bugOperations.toggle(bug);
   }
 
   removeClosed(){
     this.bugs = this.bugs.filter(bug => !bug.isClosed);
   }
 
-  getClosedCount(){
+  getClosedCount() : number {
     //return this.bugs.filter(bug => bug.isClosed).length;
     return this.bugs.reduce((closedCount, bug) => closedCount + (bug.isClosed ? 1 : 0), 0);
   }
