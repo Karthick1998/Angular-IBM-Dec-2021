@@ -181,3 +181,22 @@ Structure and Interpretation of Computer Programs
 
 Memoization
     Technique in which the result of a function is retained and reused
+
+LocalStorage
+    window.localStorage
+        - key/value store
+        - key & value must be strings (use JSON.stringify & JSON.parse for serialization and deserialization)
+        - SOP (same origin policy)
+        - ~10 MB or storage limit
+        - APIs
+            - setItem(key, value) => insert & update
+            - getItem(key) => value
+            - removeItem(key) => delete
+            - clear() => delete all
+            - key(index) => key @ index
+            - lenght => number of items
+
+        creating a bug should save the bug in the storage
+        toggling a bug should update the bug in the storage
+        removing a bug should remove the bug from the storage
+        load the bugs from the storage when the application is loaded in the browser
