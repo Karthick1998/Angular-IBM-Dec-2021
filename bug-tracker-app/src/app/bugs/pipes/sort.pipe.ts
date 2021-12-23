@@ -35,10 +35,11 @@ export class SortPipe implements PipeTransform{
         return comparer;
     }
 
-    transform(values: any[], attrName : string, desc : boolean = false) : any[] {
-        if (!values || !values.length || !attrName) return values;
+    transform(bugs: any[], attrName : string, desc : boolean = false) : any[] {
+        console.log('sortPipe.transform triggered')
+        if (!bugs || !bugs.length || !attrName) return bugs;
         const comparer = this.getComparer(attrName, desc);
-        return values.sort(comparer);
+        return bugs.sort(comparer);
     }
 
 }

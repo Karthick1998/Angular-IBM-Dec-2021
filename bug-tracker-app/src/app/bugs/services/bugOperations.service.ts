@@ -17,7 +17,8 @@ export class BugOperations{
         return newBug;
     }
 
-    toggle(bug: Bug) {
-      bug.isClosed = !bug.isClosed;
+    toggle(bugToToggle: Bug) : Bug {
+      const toggledBug = {...bugToToggle, isClosed : !bugToToggle.isClosed};
+      return toggledBug;
     }
 }

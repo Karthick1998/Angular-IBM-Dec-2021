@@ -146,3 +146,38 @@ To create a pipe
         implement PipeTransform interface
             implement the transform method
         Register the class with the module
+
+Pure functions
+    - functions with NO side effects
+    - If the invocation of a function can be replaced with the result of a function without any changes in the outcome then the function is said be with NO side effects
+    - A pure function will ALWAYS exhibit the same behavior (result) for the same input (arguments)
+
+    Example of a pure function
+        function add(x,y){
+            return x + y;
+        }
+
+        function addClient(){
+            const result = add(100,200);
+            console.log(`result = ${result}`);
+        }
+
+    Example of a non-pure function
+        function add(x,y){
+            console.log(`processing ${x} and ${y}`) //=> side effect
+            return x + y;
+        }
+
+        function addClient(){
+            const result = add(100,200);
+            console.log(`result = ${result}`);
+        }
+
+    Side effects
+        communication to external resource (console, database, ajax call)
+    the function depends on any data that is NOT passed as arguments
+
+Structure and Interpretation of Computer Programs
+
+Memoization
+    Technique in which the result of a function is retained and reused

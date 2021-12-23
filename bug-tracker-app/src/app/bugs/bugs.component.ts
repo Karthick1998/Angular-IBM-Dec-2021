@@ -32,24 +32,21 @@ export class BugsComponent implements OnInit {
   addBug(newBugName : string) {
 
     const newBug : Bug = this.bugOperations.createNew(newBugName);
-    this.bugs.push(newBug);
+    //this.bugs.push(newBug);
+    this.bugs = [...this.bugs, newBug];
   }
 
-  removeBug(bug : Bug){
-    this.bugs.splice(this.bugs.indexOf(bug), 1)
+  removeBug(bugToRemove : Bug){
+    //this.bugs.splice(this.bugs.indexOf(bug), 1)
+    this.bugs = this.bugs.filter(bug => bug !== bugToRemove);
   }
 
-  toggle(bug : Bug){
-    this.bugOperations.toggle(bug);
+  toggle(bugToToggle : Bug){
+    const toggledBug = this.bugOperations.toggle(bugToToggle);
+    this.bugs = this.bugs.map(bug => bug === bugToToggle ? toggledBug : bug);
   }
 
   removeClosed(){
     this.bugs = this.bugs.filter(bug => !bug.isClosed);
-  }
-
-  getClosedCount() : number {
-    console.log('getClosedCount triggered')
-    //return this.bugs.filter(bug => bug.isClosed).length;
-    return this.bugs.reduce((closedCount, bug) => closedCount + (bug.isClosed ? 1 : 0), 0);
   }
 }
