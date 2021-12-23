@@ -2,21 +2,7 @@
 <app-bug-stats [data]="bugs"></app-bug-stats>
 
 <!-- BugSort -->
-<section class="sort">
-    <label for="">Order By :</label>
-    <select name="" id="" (change)="sortAttr = $any($event.target).value">
-        <option value="">---Select---</option>
-        <option value="id">Id</option>
-        <option value="name">Name</option>
-        <option value="isClosed">Status</option>
-        <option value="createdAt">Created</option>
-    </select>
-    <span>[ {{sortAttr}} ]</span>
-    <label for="">Descending ? :</label>
-    <input type="checkbox" name="" id="" (change)="descending = $any($event.target).checked">
-    <span>[ {{descending}} ]</span>
-    <button>Sort</button>
-</section>
+<app-bug-sort (sortAttrChange)="sortAttr=$event" (sortOrderChange)="descending=$event"></app-bug-sort>
 
 <!-- BugEdit -->
 <app-bug-edit (bugAdded)="onNewBugAdded($event)"></app-bug-edit>
