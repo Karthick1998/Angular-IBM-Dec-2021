@@ -5,7 +5,7 @@ import { BugStorageService } from './bugStorage.service';
 @Injectable({
     providedIn: 'root'
 })
-export class BugOperations{
+export class BugOperationsService{
     
     constructor(private bugStorage : BugStorageService){
 

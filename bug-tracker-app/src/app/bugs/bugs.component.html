@@ -19,12 +19,7 @@
 </section>
 
 <!-- BugEdit -->
-<section class="edit">
-    <label for="">Bug Name :</label>
-    <input type="text" (input)="newBugName = $any($event.target).value" >
-    <span> [ {{newBugName.length}} ] </span>
-    <button (click)="addBug(newBugName)">Add New</button>
-</section>
+<app-bug-edit (bugAdded)="onNewBugAdded($event)"></app-bug-edit>
 
 <!-- BugList -->
 <section class="list">

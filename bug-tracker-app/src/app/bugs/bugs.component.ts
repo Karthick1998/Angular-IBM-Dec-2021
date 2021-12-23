@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Bug } from './models/bug';
-import { BugOperations } from './services/bugOperations.service';
+import { BugOperationsService } from './services/bugOperations.service';
 
 @Component({
   selector: 'app-bugs',
@@ -10,19 +10,17 @@ import { BugOperations } from './services/bugOperations.service';
 export class BugsComponent implements OnInit {
 
   bugs : Bug[] = [];
-  newBugName : string = '';
+  
   sortAttr : string = '';
   descending : boolean = false;
 
-  constructor(private bugOperations : BugOperations) { }
+  constructor(private bugOperations : BugOperationsService) { }
 
   ngOnInit(): void {
      this.bugs = this.bugOperations.getAll();
   }
 
-  addBug(newBugName : string) {
-
-    const newBug : Bug = this.bugOperations.createNew(newBugName);
+  onNewBugAdded(newBug : Bug){
     this.bugs = [...this.bugs, newBug];
   }
 
