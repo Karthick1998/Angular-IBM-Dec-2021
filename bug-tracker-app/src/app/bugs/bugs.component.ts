@@ -17,20 +17,18 @@ export class BugsComponent implements OnInit {
   constructor(private bugOperations : BugOperations) { }
 
   ngOnInit(): void {
-    
+     this.bugs = this.bugOperations.getAll();
   }
-
-  
 
   addBug(newBugName : string) {
 
     const newBug : Bug = this.bugOperations.createNew(newBugName);
-    //this.bugs.push(newBug);
     this.bugs = [...this.bugs, newBug];
   }
 
   removeBug(bugToRemove : Bug){
     //this.bugs.splice(this.bugs.indexOf(bug), 1)
+    this.bugOperations.remove(bugToRemove);
     this.bugs = this.bugs.filter(bug => bug !== bugToRemove);
   }
 
@@ -40,6 +38,8 @@ export class BugsComponent implements OnInit {
   }
 
   removeClosed(){
-    this.bugs = this.bugs.filter(bug => !bug.isClosed);
+    this.bugs
+      .filter(bug => bug.isClosed)
+      .forEach(closedBug => this.removeBug(closedBug));
   }
 }
