@@ -1,5 +1,4 @@
-import { Component, EventEmitter, Output } from "@angular/core";
-
+import { ChangeDetectionStrategy, Component, EventEmitter, Output } from "@angular/core";
 
 @Component({
     selector : 'app-bug-sort',
@@ -17,7 +16,8 @@ import { Component, EventEmitter, Output } from "@angular/core";
             <input type="checkbox" name="" id="" (change)="sortOrderChange.emit($any($event.target).checked)">
             <button>Sort</button>
         </section>
-    `
+    `,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BugSortComponent{
     @Output()
