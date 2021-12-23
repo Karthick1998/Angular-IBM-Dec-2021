@@ -200,3 +200,16 @@ LocalStorage
         toggling a bug should update the bug in the storage
         removing a bug should remove the bug from the storage
         load the bugs from the storage when the application is loaded in the browser
+
+Adding an external library
+    
+    Install the external library
+        ng add moment 
+            OR
+        npm install moment
+
+    Importing the external library
+        import * as moment from 'moment'
+    
+    Using the external library
+        moment('2021-12-23T07:13:56.390Z').fromNow()
