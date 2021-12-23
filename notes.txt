@@ -213,3 +213,10 @@ Adding an external library
     
     Using the external library
         moment('2021-12-23T07:13:56.390Z').fromNow()
+
+
+Performation Optimizations
+    1. Use 'pure' pipes
+    2. Set the changeDetection to 'onPush' in the components
+
+    For the above to be adopted, "Make sure the state changes happen in an immutable manner"
