@@ -278,3 +278,48 @@ Asynchronous Operations
         AJAX (singular)
         server sent events (SSE) (stream)
         WebSocket (stream)
+
+    HTTP Module
+
+    json-server
+        exposes the data from a json file as  REST endpoints
+
+https://www.amazon.in
+https://www.amazon.in/electronics
+https://www.amazon.in/electronics/phones
+https://www.amazon.in/electronics/phones/google
+https://www.amazon.in/electronics/phones/google/pixel-6
+
+https://www.amazon.in/electronics/phones/google/pixel-6/reviews
+
+
+Outlook
+Outlook/Inbox
+Outlook/Inbox/Projects
+Outlook/Inbox/Projects/GreenBus
+Outlook/Inbox/Projects/GreenBus/bugs
+
+Outlook/Inbox/Projects/GreenBus/bugs/bug-101
+
+
+Every part of the application has to be bookmarkable
+
+http://myapp.com/salarycalculator
+
+visit http://myapp.com
+    click 'salarycalculator' button
+
+angular.js 1.x
+    angular.js router - 2.0
+
+angular 2.0
+    angular router - 3.0
+
+angular 2.0
+angular 4.0
+
+Tracing & Logging in Angular
+    https://www.codemag.com/article/1711021/Logging-in-Angular-Applications
+
+To create a build
+    ng build
