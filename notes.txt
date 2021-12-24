@@ -220,3 +220,16 @@ Performation Optimizations
     2. Set the changeDetection to 'onPush' in the components
 
     For the above to be adopted, "Make sure the state changes happen in an immutable manner"
+
+
+Asynchronous Operations
+    An operation that is initiated but not waited for its completion
+
+    - Callback
+    - Promise
+        Every subscription to a promise results in a NEW promise
+
+        doSomething()
+            .then(() => somethingElse())
+            .then(() => somethingElse())
+            .then(() => somethingElse())
