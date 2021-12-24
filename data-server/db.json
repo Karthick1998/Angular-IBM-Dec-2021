@@ -1,18 +1,6 @@
 {
   "bugs": [
     {
-      "id": 1,
-      "name": "Bug - 1",
-      "isClosed": false,
-      "createdAt": "2021-11-11T08:30:06.777Z"
-    },
-    {
-      "id": 2,
-      "name": "Bug - 2",
-      "isClosed": false,
-      "createdAt": "2021-11-11T08:30:10.313Z"
-    },
-    {
       "id": 3,
       "name": "Bug - 3",
       "isClosed": false,
@@ -23,6 +11,12 @@
       "name": "Bug - 4",
       "isClosed": false,
       "createdAt": "2021-11-11T08:40:56.598Z"
+    },
+    {
+      "id": 5,
+      "name": "Server communication failure",
+      "isClosed": false,
+      "createdAt": "2021-12-24T09:43:31.226Z"
     }
   ],
   "projects": [
