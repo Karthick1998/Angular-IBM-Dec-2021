@@ -233,3 +233,48 @@ Asynchronous Operations
             .then(() => somethingElse())
             .then(() => somethingElse())
             .then(() => somethingElse())
+    - Async Await
+    - Observables
+        Inverse of Enumerable
+            Enumerable => Iterable + lazy evaluation
+
+    Data is available only in future, one after another, across a timeline
+        Event streams
+
+    Event Driven Applications
+        Application where the sequence of execution is determined by external factors (events)
+
+    emp.dat
+    id,name,dob,doj,salary,dept
+
+    write a program to calculate the average salary of the employee from the emp.dat
+        var sumOfSalary = 0,
+            countOfEmp = 0;
+        open the file
+        while (!eof){
+            read line
+            parse the line
+            add salary to sumOfSalary
+            increment countOfEmp
+        }
+        salary = sumOfSalary / countOfEmp
+        return salary;
+
+    Rxjs
+        Observables
+        Utilities (Operators)
+
+    Rx.Net
+        Mouse as a database
+
+
+    Promise - singular result
+
+    Stream of Events
+    Browser
+        keyboard (stream)
+        mouse (stream)
+        timers (setinterval, settimeout) (stream)
+        AJAX (singular)
+        server sent events (SSE) (stream)
+        WebSocket (stream)
